@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <script src="https://cdn.bootcss.com/react/15.3.2/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.3.2/react-dom.js"></script>
+  <script src="https://cdn.bootcss.com/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://cdn.bootcss.com/react-router/2.4.0/ReactRouter.min.js"></script>
+  
+  <style>
+  
+  </style>
+</head>
+  
+<body>
+  
+  <div id="container">
+  
+  </div>
+  
+  <script type="text/babel">
+    var destination = document.querySelector("#container");
+
+    var App = React.createClass({
+      render: function() {
+        return (
+          <div>
+            <h1>Simple SPA</h1>
+            <ul className="header">
+              <li>Home</li>
+              <li>Stuff</li>
+              <li>Contact</li>
+            </ul>
+            <div className="content">
+     
+            </div>
+          </div>
+        )
+      }
+    });
+
+    ReactDOM.render(
+      <ReactRouter.Router>
+        <ReactRouter.Route path="/" component={App}>
+     
+        </ReactRouter.Route>
+      </ReactRouter.Router>,
+      destination
+    );
+  </script>
+</body>
+  
+</html>
